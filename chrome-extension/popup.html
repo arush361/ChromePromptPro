@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PromptPro Settings</title>
+  <style>
+    body {
+      width: 350px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .logo {
+      width: 48px;
+      height: 48px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .subtitle {
+      margin: 5px 0 0;
+      font-size: 13px;
+      opacity: 0.9;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      background: rgba(255, 255, 255, 0.9);
+      color: #333;
+      box-sizing: border-box;
+    }
+
+    input[type="password"]:focus {
+      outline: none;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #667eea;
+      margin-bottom: 12px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.2);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    .success-message, .error-message {
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 13px;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    .success-message {
+      background: rgba(34, 197, 94, 0.2);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+    }
+
+    .error-message {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+    }
+
+    .supported-sites {
+      margin-top: 25px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .supported-sites h3 {
+      margin: 0 0 12px;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .site-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      font-size: 12px;
+      opacity: 0.9;
+    }
+
+    .site-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .site-dot {
+      width: 6px;
+      height: 6px;
+      background: #22c55e;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">P</div>
+    <h1>PromptPro</h1>
+    <div class="subtitle">AI Prompt Enhancer</div>
+  </div>
+
+  <div id="message"></div>
+
+  <form id="settingsForm">
+    <div class="form-group">
+      <label for="apiKey">OpenAI API Key</label>
+      <input type="password" id="apiKey" placeholder="sk-..." required>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save Settings</button>
+    <button type="button" id="testBtn" class="btn btn-secondary">Test API Key</button>
+  </form>
+
+  <div class="supported-sites">
+    <h3>Supported Sites</h3>
+    <div class="site-list">
+      <div class="site-item">
+        <div class="site-dot"></div>
+        ChatGPT
+      </div>
+      <div class="site-item">
+        <div class="site-dot"></div>
+        Perplexity
+      </div>
+      <div class="site-item">
+        <div class="site-dot"></div>
+        Claude
+      </div>
+      <div class="site-item">
+        <div class="site-dot"></div>
+        Gemini
+      </div>
+      <div class="site-item">
+        <div class="site-dot"></div>
+        Copilot
+      </div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

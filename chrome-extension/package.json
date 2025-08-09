@@ -1,0 +1,25 @@
+{
+  "name": "promptpro-extension",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Build tooling for PromptPro Chrome extension.",
+  "scripts": {
+    "clean": "rimraf dist",
+    "prepare:dist": "mkdir -p dist && mkdir -p dist/icons",
+    "copy:static": "copyfiles manifest.json popup.html popup.js styles.css icons/**/* dist",
+    "minify:js": "terser background.js -o dist/background.js --compress --mangle && terser content.js -o dist/content.js --compress --mangle && terser popup.js -o dist/popup.js --compress --mangle",
+    "minify:css": "cleancss -o dist/styles.css styles.css",
+    "build": "npm run clean && npm run prepare:dist && npm run copy:static && npm run minify:js && npm run minify:css",
+    "zip": "cd dist && zip -r ../promptpro-extension-v$(node -p \"require('../package.json').version\").zip .",
+    "build:zip": "npm run build && npm run zip"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^5.0.5",
+    "terser": "^5.31.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

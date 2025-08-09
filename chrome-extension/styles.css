@@ -1,0 +1,383 @@
+/* PromptPro Extension Styles - Sleek Version */
+
+.promptpro-floating-button {
+  position: absolute;
+  background: rgba(37, 99, 235, 0.95);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.2s ease;
+  z-index: 10000;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1;
+  backdrop-filter: blur(10px);
+  pointer-events: auto;
+}
+
+.promptpro-floating-button:hover {
+  background: rgba(29, 78, 216, 0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.promptpro-floating-button svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+/* Sleek Modal Styles */
+.promptpro-modal {
+  position: absolute;
+  background: white;
+  border-radius: 12px;
+  width: 650px; /* Increased width by 30% */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  animation: promptpro-modal-appear 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+@keyframes promptpro-modal-appear {
+  from {
+    opacity: 0;
+    transform: translateY(4px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.promptpro-modal-content {
+  padding: 0;
+}
+
+.promptpro-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.promptpro-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #94a3b8;
+  cursor: pointer;
+  padding: 0;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.promptpro-close-btn:hover {
+  background: #f1f5f9;
+  color: #475569;
+}
+
+.promptpro-enhanced-preview {
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+  max-height: 400px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.promptpro-enhanced-preview strong,
+.promptpro-enhanced-preview b {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.promptpro-enhanced-preview em,
+.promptpro-enhanced-preview i {
+  color: #475569;
+  font-style: italic;
+}
+
+.promptpro-enhanced-preview h1,
+.promptpro-enhanced-preview h2,
+.promptpro-enhanced-preview h3,
+.promptpro-enhanced-preview h4 {
+  margin: 1em 0 0.5em;
+  font-weight: 600;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.promptpro-enhanced-preview h1 { font-size: 1.5em; }
+.promptpro-enhanced-preview h2 { font-size: 1.3em; }
+.promptpro-enhanced-preview h3 { font-size: 1.2em; }
+.promptpro-enhanced-preview h4 { font-size: 1.1em; }
+
+.promptpro-enhanced-preview p {
+  margin: 0 0 1em;
+}
+
+.promptpro-enhanced-preview ul,
+.promptpro-enhanced-preview ol {
+  margin: 0 0 1em;
+  padding-left: 1.5em;
+}
+
+.promptpro-enhanced-preview li {
+  margin-bottom: 0.5em;
+}
+
+.promptpro-enhanced-preview code {
+  background: #f1f5f9;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.9em;
+  color: #475569;
+}
+
+.promptpro-modal-actions {
+  padding: 16px 20px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.promptpro-btn {
+  padding: 8px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.promptpro-btn-apply {
+  background: #2563eb;
+  color: white;
+}
+
+.promptpro-btn-apply:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+
+.promptpro-btn-apply:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Refine button styling to match Apply button */
+.promptpro-btn-refine {
+  background: #2563eb;
+  color: #fff;
+}
+.promptpro-btn-refine:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.3);
+}
+.promptpro-btn-refine:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Unified keyboard focus ring */
+.promptpro-btn:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Busy state for refine button */
+.promptpro-btn-refine[aria-busy="true"] {
+  position: relative;
+  opacity: 0.85;
+  cursor: progress;
+}
+.promptpro-btn-refine[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  margin-top: -7px;
+  border: 2px solid rgba(255,255,255,0.6);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: promptpro-spin 0.7s linear infinite;
+}
+
+@keyframes promptpro-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Tabs */
+.promptpro-tabs {
+  display: flex;
+  gap: 12px;
+}
+
+.promptpro-tab {
+  background: none;
+  border: none;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.promptpro-tab:hover {
+  background: #f8fafc;
+  color: #334155;
+}
+
+.promptpro-tab.active {
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Refine Section */
+.promptpro-refine-description {
+  padding: 20px 20px 12px;
+  color: #475569;
+  font-size: 14px;
+}
+
+.promptpro-refine-tags {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 0 20px 20px;
+  max-height: 260px; /* Added: constrain height */
+  overflow-y: auto; /* Added: enable scrolling */
+  overscroll-behavior: contain; /* Prevent parent scroll chaining */
+  padding-right: 12px; /* Space for scrollbar */
+}
+
+/* Added: subtle scrollbar styling */
+.promptpro-refine-tags::-webkit-scrollbar {
+  width: 8px;
+}
+.promptpro-refine-tags::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 8px;
+}
+.promptpro-refine-tags::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 8px;
+}
+.promptpro-refine-tags::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.promptpro-refine-tag {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.promptpro-refine-tag:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+  transform: translateY(-1px);
+}
+
+.promptpro-refine-tag.selected {
+  background: #eff6ff;
+  border-color: #3b82f6;
+}
+
+.promptpro-tag-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #334155;
+  margin-bottom: 6px;
+}
+
+.promptpro-tag-description {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* Error Notification */
+.promptpro-error-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000001;
+  max-width: 300px;
+  animation: promptpro-notification-appear 0.3s ease;
+}
+
+@keyframes promptpro-notification-appear {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Loading spinner for enhancement */
+.promptpro-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #334155;
+}
+.promptpro-spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #2563eb;
+  border-radius: 50%;
+  animation: promptpro-spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+.promptpro-loading-text {
+  font-weight: 500;
+}
